@@ -1,4 +1,4 @@
-name: Build HM Mobiles APK
+name: Build BAVESH Stationary APK
 
 on:
   workflow_dispatch:
