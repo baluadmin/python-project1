@@ -23,9 +23,9 @@ st.markdown("""
             font-size: 20px !important;
         }
 
-        /* Force Consistent Light Pink White Background and Theme across both Light & Dark Browser Modes */
+        /* Force Consistent Deep Black Background and Theme across both Light & Dark Browser Modes */
         .stApp {
-            background-color: #fff5f8 !important; 
+            background-color: #000000 !important; 
         }
 
         /* Hide Streamlit default top header, menu, share, github, and badges */
@@ -85,37 +85,37 @@ st.markdown("""
             pointer-events: none !important;
         }
         
-        /* High contrast text formatting */
+        /* High contrast text formatting for dark background */
         label, .stTextInput label, p, span, div[data-testid="stMarkdownContainer"] p {
-            color: #0f172a !important;
+            color: #ffffff !important;
             font-weight: 700 !important;
             font-size: 20px !important;
         }
         
-        /* Input boxes styling with explicit light mode colors to block browser dark mode overrides */
+        /* Input boxes styling with explicit dark mode background and white text */
         input, textarea, div[data-baseweb="select"] > div {
-            background-color: #ffffff !important;
-            color: #0f172a !important;
-            border: 2px solid #cbd5e1 !important;
+            background-color: #121212 !important;
+            color: #ffffff !important;
+            border: 2px solid #333333 !important;
             font-size: 24px !important;
             font-weight: 700 !important;
             border-radius: 12px !important;
         }
         input:focus, textarea:focus {
             border-color: #f472b6 !important;
-            box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.15) !important;
+            box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.25) !important;
         }
 
-        /* Soft Light Pink Gradient Header Banner */
+        /* Dark Gradient Header Banner */
         .brand-banner {
-            background: linear-gradient(135deg, #ffe4e6 0%, #fbcfe8 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
             padding: 14px 20px;
             border-radius: 12px;
-            color: #831843 !important;
+            color: #ffffff !important;
             text-align: center;
-            box-shadow: 0 3px 10px -2px rgba(251, 207, 232, 0.3);
+            box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.8);
             margin-bottom: 12px;
-            border: 1px solid #fbcfe8;
+            border: 1px solid #333333;
             max-width: 100%;
         }
         .brand-banner .brand-title {
@@ -123,7 +123,7 @@ st.markdown("""
             font-size: 44px !important;
             font-weight: 900 !important;
             letter-spacing: 0.5px;
-            color: #831843 !important;
+            color: #ffffff !important;
             margin: 0 0 2px 0;
             text-transform: lowercase;
         }
@@ -131,28 +131,29 @@ st.markdown("""
             font-size: 22px !important;
             font-weight: 800 !important;
             letter-spacing: 0.5px;
-            color: #9d174d !important;
+            color: #f472b6 !important;
             margin: 0;
         }
 
-        /* Light Pink Streamlit Buttons - Fixed text visibility by forcing pink gradient background and dark text explicitly */
+        /* Dark Theme Streamlit Buttons */
         div.stButton > button, div[data-testid="stFormSubmitButton"] > button {
-            background: linear-gradient(135deg, #ffe4e6 0%, #fbcfe8 100%) !important;
-            color: #0f172a !important;
-            border: 1px solid #f472b6 !important;
+            background: linear-gradient(135deg, #1f1f1f 0%, #2d2d2d 100%) !important;
+            color: #ffffff !important;
+            border: 1px solid #444444 !important;
             font-weight: 800 !important;
             font-size: 22px !important;
             border-radius: 12px !important;
             padding: 0.8rem 1rem !important;
             width: 100% !important;
             display: block !important;
-            box-shadow: 0 4px 12px rgba(251, 207, 232, 0.4) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
             transition: all 0.2s ease-in-out;
         }
         div.stButton > button:hover, div[data-testid="stFormSubmitButton"] > button:hover {
-            background: linear-gradient(135deg, #fbcfe8 0%, #f472b6 100%) !important;
-            color: #0f172a !important;
-            box-shadow: 0 6px 15px rgba(244, 114, 182, 0.5) !important;
+            background: linear-gradient(135deg, #333333 0%, #444444 100%) !important;
+            color: #ffffff !important;
+            border-color: #f472b6 !important;
+            box-shadow: 0 6px 15px rgba(244, 114, 182, 0.3) !important;
             transform: translateY(-1px);
         }
 
@@ -208,13 +209,13 @@ st.markdown("""
             font-size: 46px !important;
             font-weight: 900 !important;
             margin: 0 0 5px 0;
-            color: #0f172a !important;
+            color: #ffffff !important;
             text-transform: lowercase;
         }
 
         .login-title p {
             font-size: 22px !important;
-            color: #64748b !important;
+            color: #94a3b8 !important;
             margin: 0;
         }
 
@@ -224,9 +225,9 @@ st.markdown("""
             margin: 0 auto;
             padding: 28px 32px;
             border-radius: 16px;
-            background-color: #ffffff !important;
-            border: 2px solid #fbcfe8 !important;
-            box-shadow: 0 10px 25px -5px rgba(251, 207, 232, 0.3);
+            background-color: #121212 !important;
+            border: 2px solid #333333 !important;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8);
             text-align: center;
         }
 
@@ -234,7 +235,7 @@ st.markdown("""
             margin: 0 0 15px 0;
             font-size: 28px !important;
             font-weight: 800 !important;
-            color: #1e293b !important;
+            color: #ffffff !important;
         }
 
         div[data-testid="stForm"] {
@@ -517,7 +518,7 @@ if st.session_state.current_view == "Home":
                                 if i < len(valid_paths):
                                     st.image(valid_paths[i], use_container_width=True)
                                 else:
-                                    st.markdown("<p style='text-align: center; color: #94a3b8; font-size: 13px;'>No Img</p>", unsafe_allow_html=True)
+                                    st.markdown("<p style='text-align: center; color: #666666; font-size: 13px;'>No Img</p>", unsafe_allow_html=True)
                         
                         # Row 2: 3 images
                         img_cols_2 = st.columns(3, gap="small")
@@ -526,10 +527,10 @@ if st.session_state.current_view == "Home":
                                 if i < len(valid_paths):
                                     st.image(valid_paths[i], use_container_width=True)
                                 else:
-                                    st.markdown("<p style='text-align: center; color: #94a3b8; font-size: 13px;'>No Img</p>", unsafe_allow_html=True)
+                                    st.markdown("<p style='text-align: center; color: #666666; font-size: 13px;'>No Img</p>", unsafe_allow_html=True)
                             
                     with p_div1_col:
-                        st.markdown("<div style='border-left: 2px solid #e2e8f0; height: 350px; margin-top: 1px;'></div>", unsafe_allow_html=True)
+                        st.markdown("<div style='border-left: 2px solid #333333; height: 350px; margin-top: 1px;'></div>", unsafe_allow_html=True)
 
                     with p_details_col:
                         st.markdown("<div style='height: 1px;'></div>", unsafe_allow_html=True)
@@ -544,7 +545,7 @@ if st.session_state.current_view == "Home":
                                     st.session_state.quantities[qty_key] -= 1
                                     st.rerun()
                         with q_display:
-                            st.markdown(f"<div style='text-align: center; padding-top: 6px; font-weight: 800;'>{st.session_state.quantities[qty_key]}</div>", unsafe_allow_html=True)
+                            st.markdown(f"<div style='text-align: center; padding-top: 6px; font-weight: 800; color: #ffffff;'>{st.session_state.quantities[qty_key]}</div>", unsafe_allow_html=True)
                         with q_plus:
                             if st.button("+", key=f"plus_{current_cat}_{global_idx}", use_container_width=True):
                                 st.session_state.quantities[qty_key] += 1
@@ -559,7 +560,7 @@ if st.session_state.current_view == "Home":
                             st.success(f"Added!")
                             st.rerun()
                                     
-                    st.markdown("<hr style='margin-top: 4px; margin-bottom: 4px; border: none; border-top: 2px solid #e2e8f0;'>", unsafe_allow_html=True)
+                    st.markdown("<hr style='margin-top: 4px; margin-bottom: 4px; border: none; border-top: 2px solid #333333;'>", unsafe_allow_html=True)
                 
                 # Pagination Controls at the bottom
                 if total_pages > 1:
@@ -570,7 +571,7 @@ if st.session_state.current_view == "Home":
                                 st.session_state.product_page -= 1
                                 st.rerun()
                     with pg_info:
-                        st.markdown(f"<p style='text-align: center; margin-top: 2px;'>Page {st.session_state.product_page + 1} of {total_pages}</p>", unsafe_allow_html=True)
+                        st.markdown(f"<p style='text-align: center; margin-top: 2px; color: #ffffff;'>Page {st.session_state.product_page + 1} of {total_pages}</p>", unsafe_allow_html=True)
                     with pg_next:
                         if st.button("Next ➡", use_container_width=True):
                             if st.session_state.product_page < total_pages - 1:
